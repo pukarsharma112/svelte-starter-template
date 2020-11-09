@@ -115,7 +115,7 @@ const config = {
   devtool: isProd ? false : "source-map",
   stats: "errors-only",
   devServer: {
-    contentBase: "./assets",
+    contentBase: "./public",
     host: "0.0.0.0",
     port: 3000,
     quiet: true,
@@ -133,7 +133,7 @@ if (isProd) {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./assets",
+          from: "./public",
           noErrorOnMissing: true
         }
       ]
